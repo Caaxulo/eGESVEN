@@ -1,0 +1,102 @@
+[
+    {
+      "model": "Gestor.producto",
+      "pk": 1,
+      "fields": {
+        "nombre": "Producto 1",
+        "descripcion": "Descripción del producto 1.",
+        "precio": 100.00,
+        "stock": 10,
+        "categoria": "Categoría 1"
+      }
+    },
+    {
+      "model": "Gestor.producto",
+      "pk": 2,
+      "fields": {
+        "nombre": "Producto 2",
+        "descripcion": "Descripción del producto 2.",
+        "precio": 150.00,
+        "stock": 20,
+        "categoria": "Categoría 2"
+      }
+    },
+    {
+      "model": "Gestor.producto",
+      "pk": 3,
+      "fields": {
+        "nombre": "Producto 3",
+        "descripcion": "Descripción del producto 3.",
+        "precio": 200.00,
+        "stock": 30,
+        "categoria": "Categoría 3"
+      }
+    },
+    {
+      "model": "Gestor.producto",
+      "pk": 4,
+      "fields": {
+        "nombre": "Producto 4",
+        "descripcion": "Descripción del producto 4.",
+        "precio": 250.00,
+        "stock": 40,
+        "categoria": "Categoría 4"
+      }
+    },
+    {
+      "model": "Gestor.producto",
+      "pk": 5,
+      "fields": {
+        "nombre": "Producto 5",
+        "descripcion": "Descripción del producto 5.",
+        "precio": 300.00,
+        "stock": 50,
+        "categoria": "Categoría 5"
+      }
+    },
+    {
+      "model": "Gestor.producto",
+      "pk": 6,
+      "fields": {
+        "nombre": "Producto 6",
+        "descripcion": "Descripción del producto 6.",
+        "precio": 350.00,
+        "stock": 60,
+        "categoria": "Categoría 6"
+      }
+    },
+    {
+      "model": "Gestor.producto",
+      "pk": 7,
+      "fields": {
+        "nombre": "Producto 7",
+        "descripcion": "Descripción del producto 7.",
+        "precio": 400.00,
+        "stock": 70,
+        "categoria": "Categoría 7"
+      }
+    },
+    {
+      "model": "Gestor.producto",
+      "pk": 8,
+      "fields": {
+        "nombre": "Producto 8",
+        "descripcion": "Descripción del producto 8.",
+        "precio": 450.00,
+        "stock": 80,
+        "categoria": "Categoría 8"
+      }
+    },
+    {
+      "model": "Gestor.producto",
+      "pk": 9,
+      "fields": {
+        "nombre": "Producto 9",
+        "descripcion": "Descripción del producto 9.",
+        "precio": 500.00,
+        "stock": 90,
+        "categoria": "Categoría 9"
+      }
+    }
+  ]
+  

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle del Producto</title>
+</head>
+<body>
+    <h1>{{ producto.nombre }}</h1>
+    <p><strong>Descripción:</strong> {{ producto.descripcion }}</p>
+    <p><strong>Precio:</strong> ${{ producto.precio }}</p>
+    <p><strong>Cantidad en Stock:</strong> {{ producto.stock }}</p>
+    <a href="{% url 'Gestor:lista_producto' %}">Volver a la lista</a>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Productos</title>
+</head>
+<body>
+    <h1>Lista de Productos</h1>
+    <ul>
+    {% for producto in productos %}
+        <li>
+            <a href="{% url 'Gestor:detalle_producto' producto.pk %}">{{ producto.nombre }}</a>
+            - ${{ producto.precio }}
+        </li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
