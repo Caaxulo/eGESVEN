@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.shortcuts import redirect
 
 from .models import Producto
+from .forms import ProductoForm
 # Create your views here.
 
 def redirigir_a_productos(request):
@@ -13,4 +14,11 @@ def lista_producto(request):
 
 def detalle_producto(request, pk):
     producto = get_object_or_404(Producto, pk=pk)
-    return render(request, 'productos/detalle_producto.html',{'producto':producto})
+    if request.method == 'POST':
+        form = ProductoForm(request.POST, instance=producto)
+        if form.is_valid():
+            form.save()
+            return redirect('Gestor:detalle_producto', pk=producto.pk)
+    else:
+        form = ProductoForm(instance=producto)
+    return render(request, 'productos/detalle_producto.html',{'producto':producto, 'form': form})
