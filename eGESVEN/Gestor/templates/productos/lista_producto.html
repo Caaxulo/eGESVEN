@@ -6,12 +6,24 @@
 </head>
 <body>
     <h1>Lista de Productos</h1>
+    <a href="#" onclick="document.getElementById('add-form').style.display='block'">Agregar Producto</a>
+    <div id="add-form" style="display:none;">
+        <h2>Agregar Producto</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Agregar Producto</button>
+        </form>
+        <br>
+        <a href="#" onclick="document.getElementById('add-form').style.display='none'">Cancelar</a>
+    </div>
     <ul>
     {% for producto in productos %}
-        <li>
-            <a href="{% url 'Gestor:detalle_producto' producto.pk %}">{{ producto.nombre }}</a>
-            - ${{ producto.precio }}
-        </li>
+    <li>
+        <strong>{{ producto.nombre }}</strong> - ${{ producto.precio }}
+        <a href="{% url 'Gestor:detalle_producto' producto.pk %}">Ver detalles</a>
+        <a href="{% url 'Gestor:eliminar_producto' producto.pk %}" style="color:red;">Eliminar</a>
+    </li>
     {% endfor %}
     </ul>
 </body>

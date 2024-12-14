@@ -10,7 +10,14 @@ def redirigir_a_productos(request):
 
 def lista_producto(request):
     productos= Producto.objects.all()
-    return render(request, 'productos/lista_producto.html', {'productos':productos})
+    if request.method == 'POST':
+        form = ProductoForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('Gestor:lista_producto')
+    else:
+        form = ProductoForm()
+    return render(request, 'productos/lista_producto.html', {'productos':productos, 'form':form})
 
 def detalle_producto(request, pk):
     producto = get_object_or_404(Producto, pk=pk)
@@ -22,3 +29,8 @@ def detalle_producto(request, pk):
     else:
         form = ProductoForm(instance=producto)
     return render(request, 'productos/detalle_producto.html',{'producto':producto, 'form': form})
+
+def eliminar_producto(request,pk):
+    producto = get_object_or_404(Producto, pk=pk)
+    producto.delete()
+    return redirect('Gestor:lista_producto')
